@@ -25,7 +25,7 @@ function setup(){
 // Moving background
 path=createSprite(200,200);
 path.addImage(pathImg);
-path.velocityY = 4;
+path.velocityY = 8;
 
 
 //creating boy running
@@ -62,11 +62,11 @@ function draw() {
 
     if (cashG.isTouching(boy)) {
       cashG.destroyEach();
-      treasureCollection=treasureCollection+50;
+      treasureCollection=treasureCollection+5;
     }
     else if (diamondsG.isTouching(boy)) {
       diamondsG.destroyEach();
-      treasureCollection=treasureCollection+100;
+      treasureCollection=treasureCollection+10;
       
     }else if(jewelryG.isTouching(boy)) {
       jewelryG.destroyEach();
@@ -74,7 +74,7 @@ function draw() {
       // treasureCollection=+ 150;
       // treasureCollection= 150;
       // treasureCollection= treasureCollection - 150;
-       treasureCollection= treasureCollection + 150;
+       treasureCollection= treasureCollection + 15;
       
     }else{
       if(swordGroup.isTouching(boy)) {
@@ -123,7 +123,7 @@ function createCash() {
   var cash = createSprite(Math.round(random(50, 350),40, 10, 10));
   cash.addImage(cashImg);
   cash.scale=0.12;
-  cash.velocityY = 3;
+  cash.velocityY = 13;
   cash.lifetime = 150;
   cashG.add(cash);
   }
@@ -134,7 +134,7 @@ function createDiamonds() {
   var diamonds = createSprite(Math.round(random(50, 350),40, 10, 10));
   diamonds.addImage(diamondsImg);
   diamonds.scale=0.03;
-  diamonds.velocityY = 3;
+  diamonds.velocityY = 13;
   diamonds.lifetime = 150;
   diamondsG.add(diamonds);
 }
@@ -145,7 +145,7 @@ function createjewelry() {
   var jewelry = createSprite(Math.round(random(50, 350),40, 10, 10));
   jewelry.addImage(jewelryImg);
   jewelry.scale=0.13;
-  jewelry.velocityY = 3;
+  jewelry.velocityY = 13;
   jewelry.lifetime = 150;
   jewelryG.add(jewelry);
   }
@@ -156,7 +156,7 @@ function createSword(){
   var sword = createSprite(Math.round(random(50, 350),40, 10, 10));
   sword.addImage(swordImg);
   sword.scale=0.1;
-  sword.velocityY = 3;
+  sword.velocityY = 13;
   sword.lifetime = 150;
   swordGroup.add(sword);
   }
